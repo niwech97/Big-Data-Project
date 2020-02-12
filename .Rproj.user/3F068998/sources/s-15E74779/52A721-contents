@@ -4,7 +4,7 @@
 R.version.string
 #"R version 3.6.2 (2019-12-12)"
 
-
+list.files()
 
 #setup working directory pathway
 working.dir <- getwd()
