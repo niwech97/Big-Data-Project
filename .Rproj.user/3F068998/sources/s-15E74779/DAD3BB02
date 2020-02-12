@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581549865072.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "5|23|17|0|\n18|25|24|0|\n25|85|34|0|\n35|67|39|50|\n40|61|48|2|\n49|19|56|0|\n57|34|62|0|\n63|28|111|0|\n112|19|123|0|\n124|9|146|0|\n147|9|184|0|\n185|17|188|0|\n",
+    "hash" : "0",
+    "id" : "DAD3BB02",
+    "lastKnownWriteTime" : 1581549994,
+    "last_content_update" : 1581550024575,
+    "path" : "~/R/Big Data Project/Useful R scripts/Nick's Shitty Library.R",
+    "project_path" : "Useful R scripts/Nick's Shitty Library.R",
+    "properties" : {
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
