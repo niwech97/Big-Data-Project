@@ -27,3 +27,7 @@ path.potan<- paste(working.dir, "/", output.folder.names[5], "/", sep = "")
 path.finan<- paste(working.dir, "/", output.folder.names[6], "/", sep = "")
 path.fingraph<- paste(working.dir, "/", output.folder.names[7], "/", sep = "")
 path.extr<- paste(working.dir, "/", output.folder.names[8], "/", sep = "")
+
+
+
+
