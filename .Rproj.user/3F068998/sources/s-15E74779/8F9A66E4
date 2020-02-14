@@ -1,25 +1,25 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1581549823438.000,
-    "dirty" : true,
+    "created" : 1581720284369.000,
+    "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "52A721",
-    "lastKnownWriteTime" : 1581550890,
-    "last_content_update" : 1581551468095,
+    "id" : "8F9A66E4",
+    "lastKnownWriteTime" : 1581714364,
+    "last_content_update" : 1581714364,
     "path" : "~/R/Big Data Project/Big Data Directory.R",
     "project_path" : "Big Data Directory.R",
     "properties" : {
-        "cursorPosition" : "30,0",
-        "scrollLine" : "17",
+        "cursorPosition" : "32,0",
+        "scrollLine" : "18",
         "tempName" : "Untitled1"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 2,
+    "relative_order" : 1,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_source"
