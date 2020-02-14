@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581617681874.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2115099193",
+    "id" : "AC0972EF",
+    "lastKnownWriteTime" : 1581546444,
+    "last_content_update" : 1581546444,
+    "path" : "~/R/Data-analyses-in-R-scripts/barplot.using.polygon.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
