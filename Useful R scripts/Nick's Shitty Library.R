@@ -34,37 +34,37 @@ m<-read.csv("mammals.csv",stringsAsFactors = FALSE)
 
 
 #----example functions---------------------(collapsability as well)-----------------
-#this is where you would list 
+#this is where you would list
 d<-rnorm(50,90,3)
 hist(d)
 shift,control,c adds #to the beginning of the line
 #------------------------------------------------------------
-#TO ASK QUESTIONS 
+#TO ASK QUESTIONS
 #?functionyouwanttoknow
 ?rnorm                    #example
 
 []square brackets let you manipulate within an object
 ?data.frame
 
-# 
+#
 # TYPES OF OBJECTS --------
-# lists:house with rooms and wardrobes in different rooms 
-# data frames:wardrobe different drawers within the wardrobe can have different data types 
+# lists:house with rooms and wardrobes in different rooms
+# data frames:wardrobe different drawers within the wardrobe can have different data types
 # factor
-# Data frames are two dimensional, columns and rows 
+# Data frames are two dimensional, columns and rows
 
 
 
 #---------list of useful functions---------
 #firstly, to remind on how to use the functions
-#use ? in front of any fuction and the r help page will 
-#remind you how to use that function and the order of 
+#use ? in front of any fuction and the r help page will
+#remind you how to use that function and the order of
 #relevant arguements as well as a general overview
 
 #data manipulation/visualize--------
           m<-read.csv("mammals.csv",stringsAsFactors = FALSE)
 
-x<-c(5,43,-42,65,1,-9,95,-24,63,-77) 
+x<-c(5,43,-42,65,1,-9,95,-24,63,-77)
 #assign x to be a list of numbers (d,f,g,y)
 #to get the 5th element within the object:
 x[5]
@@ -96,7 +96,7 @@ length()          #number of elements in the object
 [] #allow you to manipulate within a data frame (example below)
 length(mydata$Species[mydata$Island=="Jamaica"])
 #this above line asks the length of my data species column that contains jamaica in the island column
-#in other words it counts the species found on jamaica 
+#in other words it counts the species found on jamaica
 
 
 #examples/alternative
@@ -116,7 +116,7 @@ table(m$continent,m$status)      #make a table with m$continent column, by statu
 as.numeric(x)   #forces x into numeric class
             bd<-read.csv("BirdWindowCrash.csv", stringsAsFactors=FALSE)
 la<-filter(bd,angleDuringBirdCrash=="40 degrees")
-#makes a new object `la` that is all of the 
+#makes a new object `la` that is all of the
 #data points that had 40 degrees in the angle column
 na.rm=TRUE      #add this to make your function ignore NA's
 mammals$logbm<-log10(mammals$mass.grams)
@@ -145,7 +145,7 @@ tapply(mammals$logbm,mammals$status,median,na.rm =TRUE)
 #for these, making tables and sometimes transposing them is useful
 
 
-#graphing---------- 
+#graphing----------
 
         #base R
           rk<-read.csv("RoadKill.csv")
@@ -199,13 +199,13 @@ R.version.string
 working.dir <- getwd()
 
 #store future file names in an object... These are base folder names
-output.folder.names <- c("Clean Folder", "Figures of interest", 
+output.folder.names <- c("Clean Folder", "Figures of interest",
                          "Raw Data","Final R scripts","Potential Analysis",
                          "Relevant Analysis","Relevant Graphics","Useful R scripts")
 
-# and make the folders if they don't exit yet. 
-for(i in 1:length(output.folder.names)) 
-  if(file.exists(output.folder.names[i]) == FALSE) 
+# and make the folders if they don't exit yet.
+for(i in 1:length(output.folder.names))
+  if(file.exists(output.folder.names[i]) == FALSE)
     dir.create(output.folder.names[i])
 #these are the pathways which are necessary to send graphs to the folders.
 path.clean <- paste(working.dir, "/", output.folder.names[1], "/", sep = "")
@@ -231,5 +231,3 @@ plot(x,2x)
 #and end with this command to tell R to turn its viewing device off
 #this is because the viewing device makes the pdf viewing device mess up
 dev.off()
-
-

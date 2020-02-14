@@ -10,13 +10,13 @@ list.files()
 working.dir <- getwd()
 
 #store future file names in an object... These are base folder names
-output.folder.names <- c("Clean Folder", "Figures of interest", 
+output.folder.names <- c("Clean Folder", "Figures of interest",
                          "Raw Data","Final R scripts","Potential Analysis",
                          "Relevant Analysis","Relevant Graphics","Useful R scripts")
 
-# and make the folders if they don't exit yet. 
-for(i in 1:length(output.folder.names)) 
-  if(file.exists(output.folder.names[i]) == FALSE) 
+# and make the folders if they don't exit yet.
+for(i in 1:length(output.folder.names))
+  if(file.exists(output.folder.names[i]) == FALSE)
     dir.create(output.folder.names[i])
 #these are the pathways which are necessary to send graphs to the folders.
 path.clean <- paste(working.dir, "/", output.folder.names[1], "/", sep = "")
@@ -30,4 +30,4 @@ path.extr<- paste(working.dir, "/", output.folder.names[8], "/", sep = "")
 
 
 
-
+#test
