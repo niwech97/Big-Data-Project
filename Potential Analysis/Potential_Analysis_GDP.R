@@ -51,5 +51,7 @@ pdf(file = paste(path.maybefigs, "Box_Plot_GDP_2015_2018.pdf", sep = "/"),
 plot(GDPtime2, GDP$Value, xlab="Time", ylab="GDP in USD", main="GDP of
      57 Countries Overtime")
 dev.off()
+
+#now trying to compare data sets w sam 
 unique(GDP$LOCATION)
 
