@@ -49,3 +49,60 @@ plot(GDPtime2, GDP$Value, xlab="Time", ylab="GDP in USD", main="GDP of
      57 Countries Overtime")
 dev.off()
 unique(GDP$LOCATION)
+
+
+
+#Same for Vaccine Data
+
+
+# woo! send cleaned small file to the clean folder
+write.csv(child.clean.small, file = paste(path.clean, "Child.Vac_Clean_2015_2018", sep = "/"))
+
+# make a test plot to visualize this cleaned up data
+# plot time and vaccination percent
+plot(child.clean.small$TIME, child.clean.small$Value, pch =16, las = 1,
+     xlab = "Year", ylab = "Child Vaccination Rate",
+     main = "Child Vaccination Rates in 2015-2018", ylim = c(0,100))
+# save and send to the maybe figs folder
+
+pdf(paste(path.maybefigs,"Child Vaccines global 2015-18.pdf",sep="/"))
+plot(child.clean.small$TIME, child.clean.small$Value, pch =16, las = 1,
+     xlab = "Year", ylab = "Child Vaccination Rate",
+     main = "Child Vaccination Rates in 2015-2018", ylim = c(0,100))
+
+
+dev.off()
+
+
+
+
+
+#First attempt at FOR LOOP!!!
+
+
+length(GDP$ï..LOCATION)
+length(child.clean.small$LOCATION)
+unique(child.clean.small$LOCATION)
+unique(GDP$ï..LOCATION)
+?merge
+
+
+for (i in 1:length(GDP$location))
+replace(GDP$location[i],chil.dclean.small$location[i])
+library(dplyr)
+
+#clean vaccine final
+#clean GDP final
+length(child.clean.small$LOCATION)
+
+cvf<-transform(child.clean.small, LOCATION=factor(LOCATION)  #Correct countries Vaccine data
+cvf<-subset(cvf, child.clean.small$LOCATION !="BRA")
+cvd<-cvf[-c(31)]
+               
+cgf<-GDP$ï..LOCATION-(GDP$ï..LOCATION[33,41,42,43,45,46,48,49,50])
+factor(GDP$ï..LOCATION)
+table(cvd)
+length(cvd)
+
+
+?droplevels
