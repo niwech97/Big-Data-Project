@@ -2,7 +2,7 @@
     "path" : "~/R/Big Data Project/Clean Folder",
     "sortOrder" : [
         {
-            "ascending" : true,
+            "ascending" : false,
             "columnIndex" : 2
         }
     ]
