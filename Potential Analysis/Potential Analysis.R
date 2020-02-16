@@ -103,6 +103,11 @@ cgf<-GDP$ï..LOCATION-(GDP$ï..LOCATION[33,41,42,43,45,46,48,49,50])
 factor(GDP$ï..LOCATION)
 table(cvd)
 length(cvd)
+length(cgf)
+
+
+length(GDP$ï..LOCATION)
+length(child.clean.small$LOCATION)
 
 
 ?droplevels

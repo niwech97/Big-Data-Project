@@ -1,6 +1,6 @@
 -# Cleaning GDP data 
   library(dplyr)
-GDP <- read.csv("GDP_15-18.csv", na.strings = " ", stringsAsFactors = FALSE)
+GDP <- read.csv("Raw Data/GDP_15-18.csv", na.strings = " ", stringsAsFactors = FALSE)
 head(GDP)
 GDP <- select(GDP, -c("SUBJECT", "INDICATOR", "MEASURE", "Flag.Codes", 
                       "FREQUENCY"))

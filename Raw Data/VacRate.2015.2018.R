@@ -36,7 +36,7 @@ path.extr<- paste(working.dir, "/", output.folder.names[8], "/", sep = "")
 
 
 # import data set for vaccine rate from 2015-2018
-Child.VacRate2015.2018 <- read.csv("~/Big.Data.R/Child.VacRate2015-2018.csv")
+Child.VacRate2015.2018 <- read.csv("Raw Data/Child.VacRate2015-2018.csv")
 View(Child.VacRate2015.2018)
 
 #send to raw data folder 
@@ -54,4 +54,5 @@ str(child.clean.small)
 
 # woo! send cleaned small file to the clean folder
 write.csv(child.clean.small, file = paste(path.clean, "Child.Vac_Clean_2015_2018", sep = "/"))
+
 
