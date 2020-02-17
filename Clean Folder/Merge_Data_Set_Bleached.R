@@ -1,5 +1,6 @@
 test.total <- merge(GDP15, MCR15, by=c("LOCATION", "TIME"))
 head(test.total)
+<<<<<<< HEAD
 plot(test.total$Value.y~test.total$Value.x)
 
 abline(lm(test.total$Value.y~test.total$Value.x))
@@ -27,4 +28,8 @@ if(file.exists(output.file.names[i]) == FALSE)
 #  }
 ?file.exists
 
+=======
+<- na.omit(test.total)
+>>>>>>> 1e12c1252ed96061cdfc80b80351b3f9c5ba38b9
 
+write.csv(test.total, file=paste(path.clean,"Final Dataset.csv",sep="/"))
