@@ -91,12 +91,12 @@ dev.off()
 
 #-------- loop trials begin!-----
 #Create a loop with goals of:
-# run a linear model(regression) of child vaccine rates and GDP15
-# save results in relevant analysis folder
+# run a linear model(regression) of global child vaccine rates and GDP15
+#per year
+#save results in relevant analysis folder
 # save graph in maybe relevant graphics folder
 # ----------test for ONE COUNTRY----------
-# start with one country and do lm for one Year
-# AUT in 2015
+# start with one Year
 # explanatory variable = GDP, response = vaccine rate
 
 #we need to create an amalgamate dataset with 3 columns
@@ -104,21 +104,74 @@ dev.off()
 # Second column will be child vax rates Example (89)
 # Third column will be GDP Example (40000000)
 
+
 #rs stands for results storage!
+dataset<-read.csv(file=paste(path.clean,"Final Dataset.csv",sep="/"))
+#dataset$value.x is GDP
+#datset$value.y is Child Vax rates
+
+library(ggplot2)
+rs<-rep(NA, length(dataset$X))
+rs$results<-NA
+i <- 8
+
+model.t<-lm(dataset$Value.y[i]~dataset$Value.x[i],data=dataset)
+rs[i]<-model.t$coefficients[1]
 
 
-# rs<-rep(NA, length(dataset))
-# i <- 1
-for(i in 1:length(dataset))
-model.t<-lm(dataset$childvax[i]~dataset$GDP[i])
-sr[i]<-model.t$coefficients[1]
-pdf(paste(dataset$country[i],dataset$year[i],".pdf",sep=""))
-plot(model.t, main = "dataset$country[i]/dataset$year[i]", las = 1,
-pch = 16, xlab = "GDP", ylab = "Child Vaccination Rate"), dev.off()
 
+
+pdf(file=paste(path.fingraph,"/", dataset$TIME[i],".pdf",sep=""))
+ggplot(dataset,aes(x=dataset$TIME,y=rs[i]))+
+  geom_point()
+dev.off()
+?ggplot
 #}
+?lm
+pdf(file=paste(path.fingraph,"/", dataset$LOCATION[i],dataset$TIME[i],".pdf",sep=""))
+plot(dataset$Value.x~dataset$Value.y, main = "TEST", las = 1,
+     pch = 16, xlab = "TIME", ylab = "Linear Regression Coeffecient")
+dev.off()
+
+######-----------------------EDIT THIS BITS------------------------------------
+ # if statement. Returns TRUE or FALSE. If TRUE it will run the code between {}
+ #need to create a new object that is the years of the datasets
+
+ unique.years<- unique(dataset$TIME)
+
+ # in case of A
+#####------ALMOST FUNCTIONING LOOP--------#########
+ for(i in 1:length(dataset$X)){
+ for(ctr in 1:length(unique.years)){
+ if(dataset$TIME[i] == unique.years[ctr]){
+  graph.temp<-subset(dataset,subset = TIME==unique.years[ctr])
+  pdf(file=paste(path.fingraph,"/",dataset$TIME[i],".pdf",sep=""))
+  plot(graph.temp$Value.y,graph.temp$Value.x,main=unique.years[ctr],xlab="%of Children Vaccinated",ylab= "GDP in USD")}
+dev.off()
+   }}
+
+  output.file.names<- unique.years}
+ if(file.exists(output.file.names[i]) == FALSE)
+    write.csv(paste(path.clean,"/",output.file.names[ctr],".csv",sep=""))
+  }
+            #  }
+ ?file.exists
+ #----------------------Create Graph test--------------------------------
+model.t <- lm(dataset[, Value.x] ~ dataset[, Value.y]
+summary(model.t)
+
+plot(dataset$Value.x, dataset$Value.y)
+
+
+# new plan!
+# subset data by year and send to clean folder
+# run model off of cleaned sorted
+sort(dataset$year)
+write.csv(paste(path.clean,"/",output.file.names[ctr],".csv",sep=""))
 
 
 
+ plot(dataset$Value.x, dataset$Value.y, group=dataset$TIME)
 
-#---------attempt to merge sets-----------
+
+ #---------attempt to merge sets-----------
