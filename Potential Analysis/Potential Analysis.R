@@ -78,36 +78,9 @@ dev.off()
 
 
 #First attempt at FOR LOOP!!!
+# build basic function for one country
+# want to create a linear regression of GDP and vaccination rates over time for
+# one country to START
+# graph these results and save coefficients
 
-
-length(GDP$ï..LOCATION)
-length(child.clean.small$LOCATION)
-unique(child.clean.small$LOCATION)
-unique(GDP$ï..LOCATION)
-?merge
-
-
-for (i in 1:length(GDP$location))
-replace(GDP$location[i],chil.dclean.small$location[i])
-library(dplyr)
-
-#clean vaccine final
-#clean GDP final
-length(child.clean.small$LOCATION)
-
-cvf<-transform(child.clean.small, LOCATION=factor(LOCATION)  #Correct countries Vaccine data
-cvf<-subset(cvf, child.clean.small$LOCATION !="BRA")
-cvd<-cvf[-c(31)]
-               
-cgf<-GDP$ï..LOCATION-(GDP$ï..LOCATION[33,41,42,43,45,46,48,49,50])
-factor(GDP$ï..LOCATION)
-table(cvd)
-length(cvd)
-length(cgf)
-
-
-length(GDP$ï..LOCATION)
-length(child.clean.small$LOCATION)
-
-
-?droplevels
+for(i in nrow())
